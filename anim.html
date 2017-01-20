@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Michael Jackson</title>
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	<style type="text/css">
+		body{
+			background-color: black;
+		}
+		#stage{
+			margin-top: 50px;
+			width: 800px;
+			height: 500px;
+			position: relative;
+			background-color: white;
+			border-radius: 50%;
+		}
+		#mj{
+			margin-top: 163px;
+			width: 150px;
+			height: 150px;
+			position: absolute;
+			border-radius: 50%;
+			display: none;
+		}
+		#ban{
+			color: white;
+			font-family: 'Pacifico', cursive;
+		}
+	</style>
+</head>
+<body>
+	<center>
+	<div id="stage">
+		<img id="mj" width="100px" height="100px" src="moon.gif">
+	</div>
+	<h1 id="ban">Michael Jackson LIVE!!</h1>
+	<button onclick="Move()">HIT THE MOONWALK</button>
+	</center>
+	<script type="text/javascript">
+	function Move() {
+			var elem = document.getElementById('mj');
+			var song = new Audio('smooth.mp3');
+			var pos = 0; 
+			var id = setInterval(frame, 5);
+
+		function frame() {
+			elem.style.display = 'block';
+			song.play();
+			if (pos == 650) { 
+				clearInterval(id); 
+			}
+			else{ 
+				pos++
+				elem.style.left = pos + 'px'; 
+			}
+		}
+	}
+	</script>
+</body>
+</html>
