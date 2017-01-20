@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>animation learning</title>
+	<title>Michael Jackson</title>
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 	<style type="text/css">
 		body{
 			background-color: black;
@@ -22,13 +23,20 @@
 			border-radius: 50%;
 			display: none;
 		}
+		#ban{
+			color: white;
+			font-family: 'Pacifico', cursive;
+		}
 	</style>
 </head>
 <body>
+	<center>
 	<div id="stage">
 		<img id="mj" width="100px" height="100px" src="moon.gif">
 	</div>
+	<h1 id="ban">Michael Jackson LIVE!!</h1>
 	<button onclick="Move()">HIT THE MOONWALK</button>
+	</center>
 	<script type="text/javascript">
 	function Move() {
 			var elem = document.getElementById('mj');
